@@ -8,14 +8,9 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav mx-auto">
           @foreach($navbar as $each_page)
-          <li class="nav-item px-lg-4">
-              @if($each_page == 'index')
-              <a class="nav-link text-uppercase text-expanded" data-page="home" href="{{route('home')}}">
-              Home
-              @else
-              <a class="nav-link text-uppercase text-expanded" data-page="{{$each_page}}" href="{{ route($each_page) }}">
+          <li class="nav-item @yield('nav_'.$each_page) px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{{ route($each_page) }}">
               {{$each_page}}
-              @endif
             </a>
           </li>
           @endforeach

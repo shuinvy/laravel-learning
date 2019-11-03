@@ -25,21 +25,13 @@
 <body>
 
     @include('frontend.layouts.header')
-    @include('frontend.layouts.navbar', ['navbar' => ['index', 'about', 'products', 'store']])
+    @include('frontend.layouts.navbar', ['navbar' => ['home', 'about', 'products', 'store']])
     @yield('content')
     @include('frontend.layouts.footer')
 
   <!-- Bootstrap core JavaScript -->
   <script src="{{ asset('jquery/jquery.min.js') }}"></script>
   <script src="{{ asset('bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-  <script>
-    $('.nav-item').removeClass('active');
-    $('.nav-link').each(function(){
-      if (($(this).data('page')+"").toLowerCase() == ($('title').html()+"").toLowerCase()) {
-        $(this).parent().addClass('active');
-      }
-    });
-  </script>
 
 </body>
 
