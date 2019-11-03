@@ -36,3 +36,8 @@ Route::get('users/{name?}', function ($name = 'Chase')
 Route::group(['middleware' => ['check.age']], function () {
     Route::get('elder', 'TestController@test');
 });
+
+Route::get('userlist', 'UserController@index');
+Route::get('adduser', 'UserController@add');
+Route::get('updateuser', 'UserController@update');
+Route::get('deleteuser', 'UserController@delete');
