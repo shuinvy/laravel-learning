@@ -41,3 +41,10 @@ Route::get('userlist', 'UserController@index');
 Route::get('adduser', 'UserController@add');
 Route::get('updateuser', 'UserController@update');
 Route::get('deleteuser', 'UserController@delete');
+
+//artisan相關指令
+//php artisan make:controller
+//php artisan make:model
+//php artisan make:migration {action}_{table name}_table //建立migration檔案
+//--create=[table name] // 會自動幫你產生建立table的Schema
+//--table=[table name] //會自動幫你產生修改table的Schema
